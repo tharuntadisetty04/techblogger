@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Page Title-->
+    <title>Blogging Website with Bootstrap</title>
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Bootstrap5 link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div>
+                <img src="images/blog.png" alt="" width="30" height="24">
+            </div>&nbsp;
+            <a class="navbar-brand active" href="index.html"><span style="color:rgb(226, 110, 28);">Tech Blogger</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" target="_blank">Trending Blogs</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Featured Blogs</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Articles & Posts</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#" target="_blank">Post a Blog</a>
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#" target="_blank">Post an Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Learn
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-danger" href="https://www.w3schools.com/html/"
+                                    target="_blank">Html</a>
+                            </li>
+                            <li><a class="dropdown-item text-info" href="https://www.w3schools.com/css/"
+                                    target="_blank">Css</a>
+                            </li>
+                            <li><a class="dropdown-item text-warning" href="https://www.w3schools.com/js/"
+                                    target="_blank">Java
+                                    Script</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-success" href="https://www.w3schools.com/bootstrap5/"
+                                    target="_blank">Bootstrap</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+                                    target="_blank"><span style="color: purple;">Get Bootstrap</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary"
+                                    href="https://www.javatpoint.com/artificial-intelligence-ai"
+                                    target="_blank">Artificial intelligence</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/data-science-tutorial/?ref=ghm"
+                                    target="_blank"><span style="color: brown;">Data Science</span></a></li>
+                            <li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>&nbsp;
+
+                    <!--Login Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Login
+                    </button>
+                    <!-- Login Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Enter Details</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Enter user-id :</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Enter e-mail or mobile number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Enter password :</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>&nbsp;
+
+                    <!--Signup Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">
+                        SignUp
+                    </button>
+                    <!--Signup Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Enter Details</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="fname">Enter First name :</label>
+                                            <input type="text" class="form-control" placeholder="First name"
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="lname">Enter Last name :</label>
+                                            <input type="text" class="form-control" placeholder="Last name"
+                                                aria-label="Last name">
+                                        </div>
+                                    </div><br>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Enter E-mail or Mobile
+                                            number</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Enter userid">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Type Password</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput3" class="form-label">Re-type Password</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput3"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                            required>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I agree Terms & Conditions.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel slides -->
+    <!--Slide buttons-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <!--Slide images-->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/wd1.jpg" width="1200" height="450" class="d-block w-100" alt="webdev">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="mt-3">Web Development</h4>
+                    <p class="mb-2">Web development is the process of developing
+                        websites & web apps.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/html1.jpg" width="1200" height="450" class="d-block w-100" alt="Html">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Hyper Text Markup Language</h4>
+                    <p>HTML is used for Creating website structure.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/css1.jpg" width="1200" height="450" class="d-block w-100" alt="Css">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Cascading Style Sheets</h4>
+                    <p>CSS is used for desining the website.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/js1.png" width="1200" height="450" class="d-block w-100" alt="Js">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 style="color: black;" class="my-1">JavaScript</h4>
+                    <p style="color: black;">JS is used to build logic for the website.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/ds1.jpg" width="1200" height="450" class="d-block w-100" alt="ds">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Data Science</h4>
+                    <p>Data science is the study of data to extract meaningful insights for business.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/ai1.png" width="1200" height="450" class="d-block w-100" alt="ai">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Artificial intelligence</h4>
+                    <p>AI is the theory and development of computer systems able to perform tasks normally requiring
+                        human intelligence.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Blog features card -->
+    <div class="card text-center my-3 mx-1">
+        <h4 class="card-header btn-outline-info">Website Details </h4>
+        <div class="card-body">
+            <h5 class="card-title">Below are some blog topcics that our website provide :</h5>
+            <p class="container-fluid " style="text-align: justify;">
+            <ul class="list-unstyled">
+                <li class="mb-1">Computer Science</li>
+                <li class="mb-1">Data Science</li>
+                <li class="mb-1">Technology</li>
+                <li class="mb-1">Artificial intelligence</li>
+                <li class="mb-1">Software development etc.</li>
+            </ul>
+            </p>
+            <p class="card-text">To know more about us, click the below button.</p>
+            <a href="about.html" class="btn btn-outline-info">About Us</a>
+        </div>
+    </div>
+
+    <!--Featured blogs section-->
+    <h2 class="mx-3 border-bottom"><em>Featured Blogs :</em></h2>
+
+    <div class="row mx-4 my-3">
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-1</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/machine-learning/regenerative-auto-code-ai-gpt"
+                        target="_blank">Self-Fixing and Auto-Code with AI: Debating the Pros and Cons</a></h4>
+                <div class="hub-tile-description lead">Are scripts that fix themselves a neat idea, or a recipe
+                    for disaster? Our resident tech experts discuss the issues. We...</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-2</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/learning-and-development/promotion-interview-tips-tech"
+                        target="_blank">Promotion interview tips for tech: How to
+                        sell your
+                        value</a></h4>
+                <div class="hub-tile-description lead">There is a myth most tech professionals believe: “Everyone knows
+                    what I'm working on, and how important it is.” You...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-4 my-3">
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-3</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/software-development/code-reviews-guide"
+                        target="_blank">Code review checklist: 7 steps to level up
+                        your review
+                        process</a></h4>
+                <div class="hub-tile-description lead">A code review checklist can save time and point senior developers
+                    to the most important issues. Our free template will...</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-4</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/teams/platform-engineering-devops-difference-explained"
+                        target="_blank">Platform Engineering: A DevOps evolution,
+                        not a
+                        replacement</a></h4>
+                <div class="hub-tile-description lead">Platform Engineering is not the DevOps killer. Here's what it is,
+                    its role in modern software development, and its...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-4 my-3">
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-5</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/learning-and-development/top-tech-skills-apac-emea-us"
+                        target="_blank">Top tech skills, gaps,drawbacks and
+                        barriers in APAC, EMEA,
+                        and the
+                        US</a></h4>
+                <div class="hub-tile-description lead">We surveyed technologists and tech leaders around the world. Here
+                    are the biggest upskilling barriers, gaps, and top...</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="hub-tile-content">
+                <strong class="d-inline-block mb-1 mx-1"><u>Blog-6</u></strong>
+
+                <h4 class="text-decoration-none"><a
+                        href="https://www.pluralsight.com/blog/machine-learning/gpt-4-and-chatgpt-update"
+                        target="_blank">GPT-4: All about the latest update, and how
+                        it changes
+                        ChatGPT</a></h4>
+                <div class="hub-tile-description lead">
+                    OpenAI recently released their latest AI language model, GPT-4. In this article, we'll dive into
+                    what's changed, and...</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Trending Blogs section-->
+    <!-- Blog cards 1,2 -->
+    <h2 class="mx-3 border-bottom"><em>Trending Blogs :</em></h2>
+
+    <div class="row mx-1 my-3">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-1</u></strong>
+                    <h3 class="mb-0 text-danger">HTML</h3>
+                    <div class="mb-1 text-muted">May 12</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-danger btn-md"
+                            href="https://www.theserverside.com/definition/HTML-Hypertext-Markup-Language" role="button"
+                            target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/html2.png" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-2</u></strong>
+                    <h3 class="mb-0 text-info">CSS</h3>
+                    <div class="mb-1 text-muted">Nov 20</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-info btn-md" href="https://bloggingfordevs.com/css-blogs/"
+                            role="button" target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/css2.jpg" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog cards 3,4 -->
+    <div class="row mx-1 my-1 mb-3">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-3</u></strong>
+                    <h3 class="mb-0 text-warning">JavaScript</h3>
+                    <div class="mb-1 text-muted">May 12</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-warning btn-md" href="https://bloggingfordevs.com/javascript-blogs/"
+                            role="button" target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/js2.jpg" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-4</u></strong>
+                    <h3 class="mb-0 text-success">Bootstrap5</h3>
+                    <div class="mb-1 text-muted">Nov 20</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-success btn-md" href="https://blog.getbootstrap.com/" role="button"
+                            target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/bs2.png" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog cards 5,6 -->
+    <div class="row mx-1 my-1">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-5</u></strong>
+                    <h3 class="mb-0 text-primary">Artificial intelligence</h3>
+                    <div class="mb-1 text-muted">May 12</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-primary btn-md" href="https://www.artificial-intelligence.blog/"
+                            role="button" target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/ai2.jpg" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 mx-1"><u>Blog-6</u></strong>
+                    <h3 class="mb-0 text-primary">Data Science</h3>
+                    <div class="mb-1 text-muted">Nov 20</div>
+                    <p class="card-text mb-auto" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora, consectetur! Commodi aliquid autem ipsa voluptas amet consectetur...
+                    </p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a class="btn btn-outline-primary btn-md" href="https://towardsdatascience.com/tagged/blog"
+                            role="button" target="_blank">Continue reading</a>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="230" height="260" src="images/ds3.jpg" role="img"
+                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Articles & Posts section-->
+    <!--Articles sub section-->
+    <h2 class="mx-3 border-bottom"><em>Articles & Posts :</em></h2>
+    <div class="album py-3 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/tech1.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-1</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/tech2.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-2</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/sd.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-3</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/cc.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-4</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/do.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-5</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="230" src="images/cy.jpg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                        <div class="card-body">
+                            <strong class="d-inline-block mb-2"><u>Article-6</u></strong>
+                            <p class="card-text" style="text-align: justify;"><i>Lorem ipsum elit dolor amet
+                                    sit consectetur adipisicing elit Minima, ipsum ratione.</i></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-success">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Background img cards (Posts section)-->
+    <div class="card bg-dark text-white mx-5 mb-3 mt-3">
+        <img src="images/wd2.jpg" width="1200" height="400" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <strong class="d-inline-block mb-2 mx-1 " style="color: whitesmoke;"><u>Post - 1</u></strong>
+            <h4 class="card-title mt-2">Web Development</h4>
+            <p class="card-text">Dec 17</p>
+            <p class="lead" style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iste quibusdam, mollitia quos alias
+                temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus eum ratione unde
+                quisquam temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus
+                numquam...
+            </p>
+            <div class="d-grid gap-2 d-md-block">
+                <a class="btn btn-outline-light btn-md" href="https://web.dev/blog/" role="button"
+                    target="_blank">Continue reading</a>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-dark text-white mx-5 my-4">
+        <img src="images/ds2.jpg" width="1200" height="400" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <strong class="d-inline-block mb-2 mx-1 " style="color: whitesmoke;"><u>Post - 2</u></strong>
+            <h4 class="card-title mt-2">Data Science</h4>
+            <p class="card-text">Dec 17</p>
+            <p class="lead" style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iste quibusdam, mollitia quos alias
+                temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus eum ratione unde
+                quisquam temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus
+                numquam...
+            </p>
+            <div class="d-grid gap-2 d-md-block">
+                <a class="btn btn-outline-light btn-md" href="https://www.artificial-intelligence.blog/" role="button"
+                    target="_blank">Continue reading</a>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-dark text-white mx-5 my-4">
+        <img src="images/ai3.jpg" width="1200" height="400" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <strong class="d-inline-block mb-2 mx-1 " style="color: whitesmoke;"><u>Post - 3</u></strong>
+            <h4 class="card-title mt-2">Artificial Intelligence</h4>
+            <p class="card-text">Dec 17</p>
+            <p class="lead" style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iste quibusdam, mollitia quos alias
+                temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus eum ratione unde
+                quisquam temporibus beatae architecto libero porro quis fugit odio eligendi repellendus possimus
+                numquam...
+            </p>
+            <div class="d-grid gap-2 d-md-block">
+                <a class="btn btn-outline-light btn-md" href="https://towardsdatascience.com/tagged/blog" role="button"
+                    target="_blank">Continue reading</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid border-top">
+        <footer class="container my-1 mx-3 px-4">
+            <img class="mb-1" src="images/blog.png" alt="" width="20" height="20">
+            <strong>Tech Blogger</strong>
+            <small class="mb-2">&copy; 2017 - 2021</small>
+        </footer>
+        <footer class="container-fluid my-md-1">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="about.html">About</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="contact.html">Contact
+                                US</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Register</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Refer our site</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool features</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for
+                                developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h5>Connect with us</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">LinkedIn</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Github</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Twitter</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/my.jpg" class="rounded-circle mx-auto d-block" width="150" height="150">
+                    <h4>Tharun(Developer)</h4>
+                    <a class="btn btn-outline-danger mb-1" href="about.html">View details</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--Sub footer-->
+    <footer class="footer bg-dark">
+        <div class="row container-fluid">
+            <div class="col-md-10 text-center">
+                <p class="text-light mt-1 mb-0">Desinged by Tharun</p>
+                <p class="text-light mb-1">© 2017-2021 Company, Inc.&nbsp;
+                    <a href="#" class="link-light text-decoration-none">Privacy</a> ·
+                    <a href="#" class="link-light text-decoration-none">Terms</a>
+                </p>
+            </div>
+            <div class="col-md-2 text-start mt-2">&nbsp;
+                <a class="btn btn-outline-light" href="index.html">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
