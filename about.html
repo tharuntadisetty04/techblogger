@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website with Bootstrap</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div>
+                <img src="images/blog.png" alt="" width="30" height="24">
+            </div>&nbsp;
+            <a class="navbar-brand active"><span style="color:rgb(226, 110, 28);">Tech Blogger</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" target="_blank">Trending Blogs</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Featured Blogs</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Articles & Posts</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#" target="_blank">Post a Blog</a>
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#" target="_blank">Post an Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Learn
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-danger" href="https://www.w3schools.com/html/"
+                                    target="_blank">Html</a>
+                            </li>
+                            <li><a class="dropdown-item text-info" href="https://www.w3schools.com/css/"
+                                    target="_blank">Css</a>
+                            </li>
+                            <li><a class="dropdown-item text-warning" href="https://www.w3schools.com/js/"
+                                    target="_blank">Java
+                                    Script</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-success" href="https://www.w3schools.com/bootstrap5/"
+                                    target="_blank">Bootstrap</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+                                    target="_blank"><span style="color: purple;">Get Bootstrap</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary"
+                                    href="https://www.javatpoint.com/artificial-intelligence-ai"
+                                    target="_blank">Artificial intelligence</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/data-science-tutorial/?ref=ghm"
+                                    target="_blank"><span style="color: brown;">Data Science</span></a></li>
+                            <li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>&nbsp;
+
+                    <!--Login Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Login
+                    </button>
+                    <!-- Login Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Enter Details</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Enter user-id :</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Enter e-mail or mobile number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Enter password :</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>&nbsp;
+
+                    <!--Signup Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">
+                        SignUp
+                    </button>
+                    <!--Signup Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Enter Details</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="fname">Enter First name :</label>
+                                            <input type="text" class="form-control" placeholder="First name"
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="lname">Enter Last name :</label>
+                                            <input type="text" class="form-control" placeholder="Last name"
+                                                aria-label="Last name">
+                                        </div>
+                                    </div><br>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Enter E-mail or Mobile
+                                            number</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Enter userid">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Type Password</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput3" class="form-label">Re-type Password</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput3"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I agree Terms & Conditions.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--About page start-->
+    <div class="container-fluid text-center border-bottom" style="background-color: wheat;">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <h1 class="display-3 fw-bold">Tech Blogger</h1>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <strong class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit
+                    itaque asperiores at perspiciatis.</strong>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!--Objectives-->
+    <div class="container-fluid text-center px-4 mb-4 mt-3 border-bottom">
+        <h1 class="display-5 fw-bold">Company's objective</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi soluta quam
+                vel laborum dolorem culpa illo, labore libero dignissimos, quas sit ipsum, asperiores magni? Optio ipsam
+                perspiciatis architecto dignissimos!</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-4">
+                <button type="button" class="btn btn-primary btn-lg me-sm-3">Learn more</button>
+                <a href="contact.html" class="text-decoration-none"><button type="button"
+                        class="btn btn-primary btn-lg px-3">Join us</button></a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="images/ab1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                    width="700" height="600">
+            </div>
+        </div>
+    </div>
+
+    <!--Mission and vision-->
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-5 fw-bold">Missions & Vision</h1>
+                <p class="lead mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid dolores ut
+                    reprehenderit eveniet quibusdam, dolorem neque expedita fugit cupiditate.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3 mt-2">
+                    <button type="button" class="btn btn-outline-info btn-lg px-4 me-md-2">Missions</button>
+                    <button type="button" class="btn btn-outline-warning btn-lg px-4">Portfolio</button>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="images/ab2.jpg" alt="" width="720">
+            </div>
+        </div>
+    </div>
+
+    <!--Achievements-->
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-5 fw-bold">Achievements</h1>
+                <p class="lead mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid dolores ut
+                    reprehenderit eveniet quibusdam, dolorem neque expedita fugit cupiditate.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3 mt-2">
+                    <button type="button" class="btn btn-outline-danger btn-lg px-4 me-md-2">See more</button>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="images/ab3.jpg" alt="" width="720" height="360">
+            </div>
+        </div>
+    </div>
+
+    <!--Site details-->
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-5 fw-bold">Website features</h1>
+                <p class="lead mb-4">This Website is made with Bootstrap5, which is a CSS front-end frame work. It a
+                    simple and best framework for desining websites and templates.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3 mt-2">
+                    <button type="button" class="btn btn-outline-success btn-lg px-3 me-md-2">Get Bootstrap</button>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="images/bs1.jpg" alt="" width="720" height="360">
+            </div>
+        </div>
+    </div>
+
+    <!--Team-->
+    <h1 class="display-3 border-bottom text-center"><i>Our Team</i></h1>
+
+    <div class="row container-fluid mt-4">
+        <div class="col-md-4 text-center border-end">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/my.jpg">
+            <rect width="100%" height="100%" fill="#777"></rect>
+            <h2 class="mb-0">Tharun</h2>
+            <p class="lead mb-2"><strong>Founder & CEO</strong></p>
+            <p><a class="btn btn-info" href="#">View details</a></p>
+        </div>
+
+        <div class="col-md-4 text-center border-end">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/my.jpg">
+            <rect width="100%" height="100%" fill="#777"></rect>
+            <h2 class="mb-0">Tharun</h2>
+            <p class="lead mb-2"><strong>Co - Founder</strong></p>
+            <p><a class="btn btn-warning" href="#">View details</a></p>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/my.jpg">
+            <rect width="100%" height="100%" fill="#777"></rect>
+            <h2 class="mb-0">Tharun</h2>
+            <p class="lead mb-2"><strong>Developer</strong></p>
+            <p><a class="btn btn-danger" href="#">View details</a></p>
+        </div>
+    </div>
+
+    <!--Services-->
+    <h1 class="display-3 border-bottom text-center mt-2"><i>Services</i></h1>
+    <div class="container py-3" id="hanging-icons">
+        <div class="row g-4 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft1.jpg" width="40" height="40">
+                </div>
+                <div>
+                    <h2>Service 1</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea
+                        perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft2.jpg" width="40" height="40">
+                </div>
+                <div>
+                    <h2>Service 2</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea
+                        perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft3.jpg" width="43" height="40">
+                </div>
+                <div>
+                    <h2>Service 3</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3" id="hanging-icons">
+        <div class="row g-4 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft6.jpg" width="46" height="40">
+                </div>
+                <div>
+                    <h2>Service 4</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea
+                        perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft4.jpg" width="40" height="40">
+                </div>
+                <div>
+                    <h2>Service 5</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square mx-2 border rounded-3">
+                    <img src="images/ft5.jpg" width="43" height="43">
+                </div>
+                <div>
+                    <h2>Service 6</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+                        in temporibus ea perferendis
+                        quibusdam eius tempora deleniti eaque non repellat.</p>
+                    <a href="#" class="btn btn-outline-primary">
+                        Click here
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FAQ-->
+    <section id="faq" class="faq mt-3 mb-2 border-top">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+            <header class="section-header border-bottom">
+                <h1 class="display-3 text-center mt-1 mb-0"><strong>F.A.Q</strong></h1>
+                <h5 class="text-center">Frequently Asked Questions</h5>
+            </header>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- F.A.Q List 1-->
+                    <div class="accordion accordion-flush" id="faqlist1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-content-1">
+                                    Non consectetur a erat nam at lectus urna duis?
+                                </button>
+                            </h2>
+                            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-content-2">
+                                    Feugiat scelerisque varius enim nunc faucibus a pellentesque?
+                                </button>
+                            </h2>
+                            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-content-3">
+                                    Dolor sit amet adipiscing elit pellentesque habitant morbi?
+                                </button>
+                            </h2>
+                            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- F.A.Q List 2-->
+                    <div class="accordion accordion-flush" id="faqlist2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2-content-1">
+                                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                                </button>
+                            </h2>
+                            <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2-content-2">
+                                    Tempus quam pellentesque nec nam aliquam sem et tortor?
+                                </button>
+                            </h2>
+                            <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2-content-3">
+                                    Varius vel pharetra vel turpis nunc eget lorem dolor?
+                                </button>
+                            </h2>
+                            <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                <div class="accordion-body">
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus non.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <div class="container-fluid border-top">
+        <footer class="container my-1 mx-4 px-4">
+            <img class="mb-1" src="images/blog.png" alt="" width="20" height="20">
+            <strong>Tech Blogger</strong>
+            <small class="mb-2">&copy; 2017 - 2021</small>
+        </footer>
+        <footer class="container-fluid my-md-1">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="about.html">About</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="contact.html">Contact
+                                US</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Register</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Refer our site</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool features</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for
+                                developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Connect with us</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">LinkedIn</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Github</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Twitter</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+
+                    </ul>
+                </div>
+                <!--<div class="col-md-3 text-center">
+                    <img src="images/my.jpg" class="rounded-circle mx-auto d-block" width="150" height="150">
+                    <h4>Tharun(Developer)</h4>
+                    <a class="btn btn-outline-danger mb-1" href="about.html">View details</a>
+                </div>-->
+            </div>
+        </footer>
+    </div>
+    <!--Sub footer-->
+    <footer class="footer bg-dark">
+        <div class="row container-fluid">
+            <div class="col-md-10 text-center">
+                <p class="text-light mt-1 mb-0">Desinged by Tharun</p>
+                <p class="text-light mb-1">© 2017-2021 Company, Inc.&nbsp;
+                    <a href="#" class="link-light text-decoration-none">Privacy</a> ·
+                    <a href="#" class="link-light text-decoration-none">Terms</a>
+                </p>
+            </div>
+            <div class="col-md-2 text-start mt-2">&nbsp;
+                <a class="btn btn-outline-light" href="about.html">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
